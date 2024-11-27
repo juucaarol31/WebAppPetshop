@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pet Shop - Pesquisa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Contêiner da imagem com o espaçamento à esquerda */
+            .image-container {
+                padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+                box-sizing: border-box; /* Para garantir que o padding não afete o tamanho total */
+                overflow: hidden; /* Impede que a imagem ultrapasse a área */
+                display: flex; /* Usar flexbox para controlar o alinhamento da imagem */
+                justify-content: flex-start; /* Alinha a imagem à esquerda */
+            }
+            
+            /* Estilo da imagem */
+            img {
+                transform: rotate(-360deg); /* Rotaciona a imagem 360 graus no sentido anti-horário */
+                max-width: 100vh; /* Ajusta a largura da imagem para não ultrapassar a altura */
+                max-height: 100vw; /* Ajusta a altura da imagem para não ultrapassar a largura */
+                object-fit: contain; /* Ajusta a imagem sem cortar */
+                margin-bottom: 0; /* Remove o espaço abaixo da imagem */
+                display: block; /* Elimina o espaço em branco abaixo da imagem */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pesquisa de Satisfação</h1>       
+        <form name="frmPet" method="post" action="pesquisa.jsp">
+            Nome do Pet: <input type="text" name="nome"> <p>
+            Raça: <input type="text" name="raca"> <p>
+            Nome do Dono: <input type="text" name="nomedono"> <p>
+            Telefone: <input type="text" name="telefone"> <p>
+            Data da Pesquisa: <input type="date" name="dt_pesq"> <p>  <!-- Novo campo para data -->
+            
+            <!-- Contêiner da imagem com a rotação -->
+            <div class="image-container">
+                <img src="../imagens/escala.jpg" alt="Escala de Satisfação"/>
+            </div>
+            <br><br>
+            
+            1. O cuidado e atenção dados ao seu pet foram satisfatórios? <br>
+            <input type="radio" name="r1" value="1"> 1<br>
+            <input type="radio" name="r1" value="2"> 2<br>
+            <input type="radio" name="r1" value="3"> 3<br>
+            <input type="radio" name="r1" value="4"> 4<br>
+            <input type="radio" name="r1" value="5"> 5<br><br>
+            
+            2. Como você avalia a qualidade do serviço realizado? <br>
+            <input type="radio" name="r2" value="1"> 1<br>
+            <input type="radio" name="r2" value="2"> 2<br>
+            <input type="radio" name="r2" value="3"> 3<br>
+            <input type="radio" name="r2" value="4"> 4<br>
+            <input type="radio" name="r2" value="5"> 5<br><br>
+            
+            3. O tempo de espera foi adequado?<br>
+            <input type="radio" name="r3" value="1"> 1<br>
+            <input type="radio" name="r3" value="2"> 2<br>
+            <input type="radio" name="r3" value="3"> 3<br>
+            <input type="radio" name="r3" value="4"> 4<br>
+            <input type="radio" name="r3" value="5"> 5<br><br>
+            
+            4. De forma geral, como você avalia sua experiência conosco?<br>
+            <input type="radio" name="r4" value="1"> 1<br>
+            <input type="radio" name="r4" value="2"> 2<br>
+            <input type="radio" name="r4" value="3"> 3<br>
+            <input type="radio" name="r4" value="4"> 4<br>
+            <input type="radio" name="r4" value="5"> 5<br><br>
+                
+            <input type="submit" value="Enviar">
+        </form>      
+    </body>
+</html>
